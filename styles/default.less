@@ -1,0 +1,78 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "syntax-variables";
+
+.document-outline {
+  padding: 4px;
+  margin-left: 5px;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  color: @syntax-text-color;
+
+  .list-nested-item {
+    margin-top: 2px;
+    margin-bottom: 4px;
+    padding: 1px 4px;
+    display: list-item;
+
+    span.tree-item-text {
+      line-height: normal;
+      font-weight: normal;
+    }
+
+    &.item-highlight {
+      padding: 0 3px;
+
+      border: 1px solid @pane-item-border-color;
+      border-radius: @component-border-radius;
+      // background: fade(@background-color-selected, 10%);
+      background-color: fade(overlay(@background-color-selected, @pane-item-background-color), 10%);
+      // background: @background-color-highlight;
+      // background-blend-mode: soft-light;
+      background-blend-mode: multiply;
+
+      span.tree-item-text {
+        font-weight: normal;
+      }
+    }
+
+    &.current {
+      // color: @text-color-selected;
+      & > span.tree-item-text {
+        font-weight: bold;
+        // text-shadow: 1px 0px 0px @text-color;
+      }
+    }
+
+    span.tree-item-text:hover {
+      text-decoration: underline;
+    }
+
+    .list-tree {
+      margin-left: 10px;
+    }
+
+    &.level1{
+      z-index: 100;
+    }
+
+    &.level2{
+      z-index: 200;
+    }
+
+    &.level3{
+      z-index: 300;
+    }
+
+    &.level4{
+      z-index: 400;
+    }
+  }
+}

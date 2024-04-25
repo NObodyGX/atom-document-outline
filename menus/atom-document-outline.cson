@@ -1,0 +1,9 @@
+menu: [
+  label: 'Packages'
+  submenu: [
+    label: 'Document Outline'
+    submenu: [
+      {label: 'Toggle', command: 'atom-document-outline:toggle'}
+    ]
+  ]
+]
