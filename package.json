@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "commonmark": "^0.31.0",
-    "@asciidoctor/core": "^2.2.7",
     "etch": "^0.14.1"
   }
 }
